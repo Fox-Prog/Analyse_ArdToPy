@@ -1,0 +1,53 @@
+Sextoys
+Pin DP: 0.00 V //Pin DM: 0.00 V //I: 0.51 A
+Pin DP: 0.00 V //Pin DM: 0.00 V //I: 0.53 A
+
+
+
+Batterie frontale
+Pin DP: 0.00 V //Pin DM: 0.00 V //I: 0.57 A
+Pin DP: 2.00 V //Pin DM: 2.00 V //I: 0.60 A
+
+
+
+Sextoys + Batterie
+Pin DP: 0.00 V //Pin DM: 0.00 V //I: 0.77 A
+Pin DP: 2.00 V //Pin DM: 2.00 V //I: 0.76 A
+
+
+
+Xiaomi Mi 10 lite 5G
+Pin DP: 0.00 V //Pin DM: 0.00 V //I: 0.88 A
+
+Pin DP: 3.29 V //Pin DM: 1.00 V //I: 0.84 A
+Pin DP: 3.51 V //Pin DM: 0.90 V //I: 0.88 A
+
+Pin DP: 1.00 V //Pin DM: 3.29 V //I: 0.84 A
+Pin DP: 0.90 V //Pin DM: 3.51 V //I: 0.51 A
+
+Pin DP: 0.00 V //Pin DM: 0.00 V //I: 0.88 A
+
+// pin data débranchées //
+Pin DP: 0.00 V //Pin DM: 0.00 V //I: 0.88 A
+
+
+// masse commune //
+Pin DP: 3.29 V //Pin DM: 1.00 V //I: 0.92 A
+Pin DP: 1.00 V //Pin DM: 3.29 V //I: 0.51 A
+Pin DP: 2.00 V //Pin DM: 2.00 V //I: 0.68 A
+Pin DP: 2.20 V //Pin DM: 2.20 V //I: 0.65 A
+
+
+// pont diviseur de tension //
+Pin DP: 3.29 V //Pin DM: 1.16 V //I: 0.88 A
+Pin DP: 1.16 V //Pin DM: 3.29 V //I: 0.80 A
+Pin DP: 2.00 V //Pin DM: 2.00 V //I: 0.56 A
+
+// Branchement direct //
+Pin DP: 2 V //Pin DM: 2 V //I: 0.88 A
+
+// Branchement sur platine usb //
+Pin DP: 2 V //Pin DM: 2 V //I: 1.13 A
+
+// Platine usb + chargeur rapide xiaomi //
+Pin DP: 2 V //Pin DM: 2 V //I: 1.13 A
