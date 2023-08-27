@@ -30,9 +30,10 @@ def create_table(table_name):
         print("Une erreur MySQL s'est produite:", err)
 
     finally:
-        if conn is not None and conn.is_connected():
+        try:
             cursor.close()
             conn.close()
+        except: pass
 
 def replace_table(table_name):
     try:
@@ -45,9 +46,10 @@ def replace_table(table_name):
         print("Une erreur MySQL s'est produite:", err)
 
     finally:
-        if conn is not None and conn.is_connected():
+        try:
             cursor.close()
             conn.close()
+        except: pass
     
     create_table(table_name)
 
@@ -62,13 +64,14 @@ def print_dbb(arduino, table_name, data, hour):
         conn.commit()
         print("Data INSERT INTO "+table_name+'\n')
                 
-    except mysql.connector.Error as err:
-        print("Une erreur MySQL s'est produite: ", err)
+    except mysql.connector.Error as err :
+        print("Erreur MySQL... Reprise de la mesure...", err)
 
     finally:
-        if conn is not None and conn.is_connected():
+        try:
             cursor.close()
             conn.close()
+        except: pass
         
         mesure(arduino, table_name)
 
@@ -77,17 +80,12 @@ def mesure(arduino, table_name):
 
     time.sleep(1)
     arduino.write('1'.encode())
-    data = (str(arduino.readline().decode('utf').rstrip('\n'+'\r')))
-    
-    while(data == ''):
-        data = (str(arduino.readline().decode('utf').rstrip('\n'+'\r')))
-        
+    data = (str(arduino.readline().decode('utf').rstrip('\n'+'\r')))     
 
-    if(data != ''):
-        data_bdd = float(data.strip())
-        current_time = datetime.datetime.now()
-        print('Data received: '+ str(data_bdd))
-        print_dbb(arduino, table_name, data_bdd, current_time)
+    data_bdd = float(data.strip())
+    current_time = datetime.datetime.now()
+    print('Data received: '+ str(data_bdd))
+    print_dbb(arduino, table_name, data_bdd, current_time)
 
 
 def main():

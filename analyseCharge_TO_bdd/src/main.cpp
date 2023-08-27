@@ -39,7 +39,8 @@ void loop() {
         else if(abs(data-dataGo) > 0.15){
           dataGo = data;
         }
-        Serial.println(String(dataGo));
+
+        Serial.print(String(dataGo));
         Serial.flush();
       }
     }
